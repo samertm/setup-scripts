@@ -2,6 +2,9 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+. require.sh
+apt_require curl
+
 # Setup Go.
 
 version="go1.5.2"

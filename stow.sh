@@ -2,8 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-# Install stow.
-sudo apt-get install -y stow
+. require.sh
+apt_require stow
 
 # Install patch to disable warnings.
 stow_path=$(which stow)
