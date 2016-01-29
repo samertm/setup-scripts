@@ -6,4 +6,4 @@ IFS=$'\n\t'
 sh_require go
 
 # Download 'hub'.
-go get github.com/github/hub
+go get -u github.com/github/hub

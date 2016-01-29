@@ -13,3 +13,7 @@ function sh_require {
     done
     IFS=$'\n\t'
 }
+
+has() {
+    hash "$@" &>/dev/null
+}

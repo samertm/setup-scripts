@@ -13,7 +13,9 @@ tmpname="/tmp/${version}.tar.gz"
 tmpout="/tmp/go"
 out="$HOME/go"
 
-rm -rf ${tmpname} ${tmpout} ${out} # Remove all destinations, if they exist.
-curl ${link} > ${tmpname}
-tar -xf ${tmpname} -C "/tmp" # Extracts to /tmp/go.
-mv ${tmpout} ${out}
+if [ ! -d $HOME/go ]; then
+    rm -rf ${tmpname} ${tmpout} ${out} # Remove all destinations, if they exist.
+    curl ${link} > ${tmpname}
+    tar -xf ${tmpname} -C "/tmp" # Extracts to /tmp/go.
+    mv ${tmpout} ${out}
+fi
