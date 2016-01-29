@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-. require.sh
+. ../common/require.sh
 apt_require stow
 
 # Install patch to disable warnings.

@@ -2,8 +2,8 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-. require.sh
-apt_require nodejs-legacy npm
+. ../common/require.sh
+sh_require node
 
 npm install -g tldr
 tldr --update

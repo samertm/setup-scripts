@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-. require.sh
+. ../common/require.sh
 sh_require go
 
 go get golang.org/x/tools/cmd/goimports

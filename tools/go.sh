@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-. require.sh
+. ../common/require.sh
 apt_require curl
 
 # Setup Go.
