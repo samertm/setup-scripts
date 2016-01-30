@@ -13,3 +13,8 @@ sudo apt-get update
 
 # 4. Install Spotify
 sudo apt-get install spotify-client
+
+# 5. Install libgcrypt11
+cd /tmp
+wget https://launchpad.net/ubuntu/+archive/primary/+files/libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
+sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb
