@@ -9,4 +9,5 @@ sh_require ../tools/stow
 cd $HOME
 git clone git@github.com:samertm/dotfiles
 cd $HOME/dotfiles
+./clean.sh
 ./install.sh
