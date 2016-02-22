@@ -15,10 +15,6 @@ dep 'dropbox.bin' do
   requires 'dropbox sources', 'python-gpgme.lib'
 end
 
- do
-  installs 'python-gpgme'
-end
-
 dep 'dropbox sources' do
   met? {
     shell? "grep '^deb http://linux.dropbox.com' /etc/apt/sources.list"

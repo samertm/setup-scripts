@@ -1,6 +1,9 @@
 dep 'ag.bin' do
   installs 'silversearcher-ag'
 end
+dep 'apt-transport-https.lib'
+dep 'ca-certificates.lib'
+dep 'firefox.bin'
 dep 'gimp.bin'
 dep 'keepassx.bin'
 dep 'libffi-dev.lib'
@@ -18,4 +21,5 @@ dep 'stow.bin' do
   }
 end
 dep 'tree.bin'
+dep 'vim.bin'
 dep 'xclip.bin'

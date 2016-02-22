@@ -37,8 +37,8 @@ dep 'cli tools' do
     'tree.bin',
     'xclip.bin',
     'stow.bin',
-    'golang',
     'golang tools',
+    'vim.bin',
   ]
 end
 
@@ -46,11 +46,17 @@ dep 'apps' do
   requires [
     'gimp.bin',
     'keepassx.bin',
+    'firefox',
+    'slack.bin',
   ]
 end
 
 dep 'dev dependencies' do
-  requires 'python'
+  requires [
+    'docker',
+    'python',
+    'golang',
+  ]
 end
 
 dep 'python' do
