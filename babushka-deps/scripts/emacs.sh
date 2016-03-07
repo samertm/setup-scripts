@@ -10,7 +10,7 @@ cd emacs
 
 EMACS=emacs-24.5
 
-git checkout $EMACS 
+git checkout $EMACS
 
 sudo apt-get build-dep emacs24
 ./autogen.sh
@@ -18,5 +18,5 @@ sudo apt-get build-dep emacs24
 make -j16
 sudo make install
 cd /usr/local/stow
-sudo stow $EMACS 
+sudo stow $EMACS
 
