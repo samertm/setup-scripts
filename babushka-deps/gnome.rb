@@ -1,6 +1,9 @@
-dep 'gnome.bin' do
-  installs 'ubuntu-gnome-desktop'
+dep 'gnome' do
+  requires 'ubuntu-gnome-desktop.lib'
+  # sudo dpkg-reconfigure gdm
 end
+
+dep 'ubuntu-gnome-desktop.lib'
 
 dep 'gsettings' do
   requires [

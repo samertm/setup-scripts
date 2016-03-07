@@ -12,7 +12,7 @@ To install everything:
 
 ```
 $ babushka computer
-$ babushka gnome.lib # for gnome 3 desktop
+$ babushka gnome # for gnome 3 desktop
 ```
 
 # TODO

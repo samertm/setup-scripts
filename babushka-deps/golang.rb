@@ -18,7 +18,7 @@ meta :go do
   template {
     requires 'golang'
     met? {
-      (ENV['GOPATH'] /  source).exists?
+      (ENV['GOPATH'] / 'src' / source).exists?
     }
 
     meet {

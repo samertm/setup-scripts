@@ -20,12 +20,14 @@ user_pref("ui.key.menuAccessKey", 0); // Don't show menu bar on "alt".'
 eos
     File.write(userjs, data)
     log <<-eos
-Install these addons:
+Install these addons, then press enter:
 https://addons.mozilla.org/en-us/firefox/addon/adwaita/
 https://addons.mozilla.org/en-US/firefox/addon/htitle/
 https://addons.mozilla.org/en-US/firefox/addon/disable-ctrl-q-shortcut/
 https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+https://www.google.com/tools/dlpage/hangoutplugin
 eos
+    STDIN.gets
   }
 end
 
