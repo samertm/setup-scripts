@@ -39,6 +39,7 @@ dep 'cli tools' do
     'stow.bin',
     'golang tools',
     'vim.bin',
+    'emacs',
   ]
 end
 
