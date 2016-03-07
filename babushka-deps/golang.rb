@@ -32,12 +32,21 @@ dep 'golang tools' do
     'goimports.go',
     'godef.go',
     'gocode.go',
-    #'hub.go',
+    'hub',
   ]
 end
 
-dep 'hub.go' do
-  source 'github.com/github/hub'
+dep 'hub' do
+  source = "github.com/github/hub"
+  met? {
+    '~/bin/hub'.p.executable?
+  }
+  meet {
+    log shell "go get -d #{source}"
+    cd (ENV['GOPATH'] / 'src' / source) do
+      log shell "./script/build -o ~/bin/hub"
+    end
+  }
 end
 
 dep 'goimports.go' do
