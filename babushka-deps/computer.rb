@@ -13,11 +13,11 @@ dep 'computer' do
 end
 
 dep 'directories' do
-  requires 'create dirs', 'symlink org dir'
+  requires 'create dirs', 'symlink dirs'
 end
 
 dep 'create dirs' do
-  met? { '~/src'.p.exists? and '~/tmp'.p.exists? and '~/bin'.p.exists? }
+  met? { '~/src'.p.exists? and '~/tmp'.p.exists? and '~/bin'.p.exists?}
   meet {
     shell 'mkdir -p ~/src'
     shell 'mkdir -p ~/tmp'
@@ -26,9 +26,18 @@ dep 'create dirs' do
   }
 end
 
+dep 'symlink dirs' do
+  requires 'symlink org dir', 'symlink snippet dir'
+end
+
 dep 'symlink org dir' do
   met? { '~/org'.p.symlink? }
   meet { shell 'ln -s ~/Dropbox/org ~/org' }
+end
+
+dep 'symlink snippet dir' do
+  met? { '~/src/snippets'.p.symlink? }
+  meet { shell 'ln -s ~/Dropbox/code/snippets ~/src/snippets' }
 end
 
 dep 'cli tools' do
