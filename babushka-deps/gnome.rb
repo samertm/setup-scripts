@@ -11,7 +11,41 @@ dep 'gsettings' do
     'set time format to 12 hour.gsettings',
     'set capslock to ctrl.gsettings',
     'drag with alt.gsettings',
+    'alt tab switches windows',
   ]
+end
+
+dep 'alt tab switches windows' do
+  requires [
+    'fix switch applications.gsettings',
+    'fix switch applications backwards.gsettings',
+    'fix switch windows.gsettings',
+    'fix switch windows backwards.gsettings',
+  ]
+end
+
+dep 'fix switch applications.gsettings' do
+  schema 'org.gnome.desktop.wm.keybindings'
+  key 'switch-applications'
+  value "['<Super>Tab']"
+end
+
+dep 'fix switch applications backwards.gsettings' do
+  schema 'org.gnome.desktop.wm.keybindings'
+  key 'switch-applications-backward'
+  value "['<Shift><Super>Tab']"
+end
+
+dep 'fix switch windows.gsettings' do
+  schema 'org.gnome.desktop.wm.keybindings'
+  key 'switch-windows'
+  value "['<Alt>Tab']"
+end
+
+dep 'fix switch windows backwards.gsettings' do
+  schema 'org.gnome.desktop.wm.keybindings'
+  key 'switch-windows-backward'
+  value "['<Shift><Alt>Tab']"
 end
 
 dep 'drag with alt.gsettings' do
