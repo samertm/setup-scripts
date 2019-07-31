@@ -12,7 +12,21 @@ dep 'gsettings' do
     'set capslock to ctrl.gsettings',
     'drag with alt.gsettings',
     'alt tab switches windows',
+    'remove dock',
   ]
+end
+
+dep 'remove dock' do
+  requires 'enable hot corners.gsettings'
+  meet {
+    log 'Run: sudo apt remove gnome-shell-extension-ubuntu-dock'
+  }
+end
+
+dep 'enable hot corners.gsettings' do
+  schema 'org.gnome.shell'
+  key 'enable-hot-corners'
+  value true
 end
 
 dep 'alt tab switches windows' do
