@@ -1,5 +1,6 @@
 dep 'golang' do
-  version = 'go1.5.2'
+  requires 'curl.bin'
+  version = 'go1.12.7'
   met? {
     '~/go/bin/go'.p.executable? and
       not raw_shell('echo $GOPATH').stdout.strip.empty?

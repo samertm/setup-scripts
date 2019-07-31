@@ -27,17 +27,12 @@ dep 'create dirs' do
 end
 
 dep 'symlink dirs' do
-  requires 'symlink org dir', 'symlink snippet dir'
+  requires 'symlink org dir'
 end
 
 dep 'symlink org dir' do
   met? { '~/org'.p.symlink? }
   meet { shell 'ln -s ~/Dropbox/org ~/org' }
-end
-
-dep 'symlink snippet dir' do
-  met? { '~/src/snippets'.p.symlink? }
-  meet { shell 'ln -s ~/Dropbox/code/snippets ~/src/snippets' }
 end
 
 dep 'cli tools' do
@@ -63,7 +58,7 @@ end
 
 dep 'dev dependencies' do
   requires [
-    'docker',
+    #'docker',
     'python',
     'golang',
   ]

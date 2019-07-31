@@ -1,6 +1,5 @@
 dep 'gnome' do
-  requires 'ubuntu-gnome-desktop.lib'
-  # sudo dpkg-reconfigure gdm
+  requires 'gsettings'
 end
 
 dep 'ubuntu-gnome-desktop.lib'
@@ -11,7 +10,14 @@ dep 'gsettings' do
     'show the date.gsettings',
     'set time format to 12 hour.gsettings',
     'set capslock to ctrl.gsettings',
+    'drag with alt.gsettings',
   ]
+end
+
+dep 'drag with alt.gsettings' do
+  schema 'org.gnome.desktop.wm.preferences'
+  key 'mouse-button-modifier'
+  value "'<Alt>'"
 end
 
 dep 'turn off bell.gsettings' do

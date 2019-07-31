@@ -4,11 +4,11 @@ IFS=$'\n\t'
 
 cd $HOME/src
 if [ ! -d emacs ]; then
-    git clone samer@git.sv.gnu.org:/srv/git/emacs.git
+    git clone https://git.savannah.gnu.org/git/emacs.git
 fi
 cd emacs
 
-EMACS=emacs-24.5
+EMACS=emacs-26.2
 
 git checkout $EMACS
 

@@ -4,7 +4,7 @@ dep 'emacs' do
     '/usr/local/bin/emacs'.p.executable?
   }
   meet {
-    log shell "cat ./scripts/emacs.sh"
-    shell "./scripts/emacs.sh"
+    log shell "cat ~/.babushka/deps/scripts/emacs.sh"
+    shell "~/.babushka/deps/scripts/emacs.sh"
   }
 end
