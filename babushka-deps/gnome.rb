@@ -12,7 +12,7 @@ dep 'gsettings' do
     'set capslock to ctrl.gsettings',
     'drag with alt.gsettings',
     'alt tab switches windows',
-    'remove dock',
+    #'remove dock',
   ]
 end
 
